@@ -13,6 +13,7 @@ app.use('/api/user', require('./routes/user'));
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/meals', require('./routes/meals'));
 
 // Test route
 app.get('/', (req, res) => {

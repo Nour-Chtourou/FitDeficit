@@ -40,7 +40,7 @@ exports.updateProfile = async (req, res) => {
     const user = await User.findByIdAndUpdate(
       req.user.id,
       { age, weight, height, gender, activityLevel, goal, tdee, targetCalories },
-      { new: true }
+      { returnDocument: 'after' }
     ).select('-password');
 
     res.json({ user, tdee, targetCalories });
